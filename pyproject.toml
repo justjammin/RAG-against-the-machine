@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratm"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "graphifyy @ file:///Users/jammin/Documents/GitHub/graphify",
+    "sentence-transformers>=3.0",
+    "chromadb>=0.5",
+    "bm25s>=0.2",
+    "scipy>=1.12",
+    "anthropic>=0.30",
+    "mcp>=1.0",
+    "click>=8.1",
+    "rich>=13.0",
+    "numpy>=1.24",
+]
+
+[project.scripts]
+ratm = "ratm.__main__:cli"
+
+[tool.setuptools.package-data]
+ratm = ["skill.md"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ratm*"]
