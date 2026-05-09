@@ -1,0 +1,37 @@
+{
+  "name": "ratm-skills",
+  "version": "0.1.0",
+  "description": "Ask questions about any codebase. Hybrid retrieval (dense + BM25 + graph PPR), cross-encoder reranking, HyDE query expansion, and Claude answers with citations.",
+  "bin": {
+    "ratm-skills": "./install.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skills",
+    "rag",
+    "retrieval",
+    "code-search",
+    "embeddings",
+    "bm25",
+    "graph"
+  ],
+  "author": {
+    "name": "Jamin Echols",
+    "url": "https://github.com/justjammin"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justjammin/RAG-against-the-machine"
+  },
+  "homepage": "https://github.com/justjammin/RAG-against-the-machine",
+  "files": [
+    "install.js",
+    "skill/",
+    ".claude-plugin/"
+  ],
+  "engines": {
+    "node": ">=16"
+  }
+}

@@ -1,4 +1,4 @@
-"""Disk cache keyed by content hash. Mirrors graphify's cache pattern."""
+"""Disk cache keyed by content hash."""
 from __future__ import annotations
 
 import hashlib

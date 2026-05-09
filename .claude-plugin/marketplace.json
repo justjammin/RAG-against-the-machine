@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ratm",
+  "description": "Ask questions about any codebase. Hybrid retrieval (dense + BM25 + graph PPR), cross-encoder reranking, HyDE, and Claude answers with citations.",
+  "owner": {
+    "name": "Jamin Echols",
+    "url": "https://github.com/justjammin"
+  },
+  "plugins": [
+    {
+      "name": "ratm",
+      "description": "Retrieval-augmented code Q&A — index a repo, ask questions, get cited answers",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

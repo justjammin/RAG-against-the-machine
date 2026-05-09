@@ -31,7 +31,7 @@ class IndexStats:
 
 
 def _node_to_chunk_text(node: dict) -> str:
-    """Convert a graphify node to a plain-text chunk for embedding."""
+    """Convert an AST node to a plain-text chunk for embedding."""
     label = node.get("label", "")
     source_file = node.get("source_file", "")
     source_location = node.get("source_location", "")
@@ -40,7 +40,7 @@ def _node_to_chunk_text(node: dict) -> str:
 
 
 def _node_to_metadata(node: dict) -> dict:
-    """Extract ChromaDB-safe metadata from a graphify node."""
+    """Extract ChromaDB-safe metadata from an AST node."""
     return {
         "node_id": str(node.get("id", "")),
         "source_file": str(node.get("source_file", "")),
@@ -59,8 +59,8 @@ def index(
     """Run the full indexing pipeline.
 
     Steps:
-    1. Collect indexable code files with graphify.extract.collect_files
-    2. Extract AST nodes + edges with graphify.extract.extract
+    1. Collect indexable code files
+    2. Extract AST nodes + edges
     3. Dedupe nodes by id
     4. Build chunk texts from nodes
     5. Embed chunks (BGE-M3) → add to ChromaDB
@@ -96,7 +96,7 @@ def index(
     raw_nodes: list[dict] = extraction.get("nodes", [])
     raw_edges: list[dict] = extraction.get("edges", [])
 
-    # 3. Dedupe nodes by id (graphify can emit duplicates across files)
+    # 3. Dedupe nodes by id (AST extractor can emit duplicates across files)
     seen_ids: set[str] = set()
     nodes: list[dict] = []
     for node in raw_nodes:

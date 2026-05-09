@@ -1,0 +1,13 @@
+{
+  "name": "ratm",
+  "description": "Retrieval-augmented code Q&A — hybrid dense+sparse+graph retrieval, cross-encoder reranking, HyDE query expansion, and Claude generation with prompt caching.",
+  "author": {
+    "name": "justjammin",
+    "url": "https://github.com/justjammin"
+  },
+  "homepage": "https://github.com/justjammin/RAG-against-the-machine",
+  "repository": "https://github.com/justjammin/RAG-against-the-machine",
+  "license": "MIT",
+  "keywords": ["rag", "retrieval", "code-search", "claude", "embeddings", "bm25", "graph"],
+  "skills": "./skill/"
+}
